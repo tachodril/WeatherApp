@@ -42,9 +42,7 @@ class temp extends React.Component {
   }
 
   getWeather(city) {
-    fetch(
-      `http://api.openweathermap.org/data/2.5/weather/?q=London,uk&APPID=40099ca65b8dbe7c1d8936ce418b4f50&units=imperial`
-    )
+    fetch(`http://localhost:7000`)
       .then(res => this.handleResponse(res))
       .then(weather => {
         if (Object.entries(weather).length) {
